@@ -7,8 +7,20 @@
 </head>
 <body>
     <script>
-        let str = 'Я изучаю JavaScript';
-        
+        let str = 'Я изучаю JavaScript'
+
+        function repl() {
+            str = setCharAt(str,7,'л');
+            alert(str);
+        }
+        function setCharAt(str,index,chr) {
+            if(index > str.length-1) return str;
+            return str.substr(0,index) + chr + str.substr(index+1);
+        }
+        repl();
+
+
+        alert(str.replace(/JavaScript/gi, "Frontend"));
     </script>
 </body>
 </html>
